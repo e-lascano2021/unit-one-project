@@ -7,12 +7,12 @@ html {
 *::before, /* All ::before pseudo-elements */
 *::after { /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
+  but can be over-ridden as needed */
   box-sizing: inherit;
 }
 
 /* resets font size to be 62.5% of the user preference - 
-   in most browser configurations this will be 10px */
+in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%
 }
@@ -26,20 +26,26 @@ body{
   align-items: center;
 }
 
-section.board {
+section {
+  border-radius: 2%;
+  background-color: blue;
   display: grid;
   grid-template-rows: repeat(6, 7vmin);
   grid-template-columns: repeat(6, 7vmin);
-  grid-gap: 0vmin;
+  grid-gap: 0.5vmin;
+  padding: 3.5px;
 }
 
 div {
-  border: 2px solid black;
-  font-size: 7vmin;
+  border: 1.8px solid black;
   text-align: center;
   vertical-align: middle;
 }
 
+div.sqrs {
+  border-radius: 50%;
+  background-color: rgb(244, 203, 209);
+}
 
 
 
