@@ -65,6 +65,7 @@ let playerTurn, isWinner, boardSqr
 
 const replayBtn = document.querySelector("#replay")
 const sqrs = document.querySelectorAll(".sqrs")
+const mssgs = document.querySelector("#message")
 
 /*--------------------------- Event Listeners -------------------------*/
 
@@ -79,27 +80,60 @@ function init(){
   boardSqr = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
   playerTurn = 1
   replayBtn.setAttribute("hidden", true)
-  // render()
+  render()
 }
 
+// function handleClick(evt){
+//   let index = parseInt(evt.target.id)
+//   //parseInt is giving me the integer
+//   // console.log(index)
+//   if (isWinner !== null){
+//     return
+//     } else if (boardSqr[index] === null){
+//       //don't change, checking to see if any square is null to make sure it doesn't get reassigned
+//       if(boardSqr[index + 6] === null){
+//         boardSqr[index + 6] = playerTurn
+//         // console.log(boardSqr)
+//       }else{
+//         boardSqr[index] = playerTurn
+//       }
+//       playerTurn *= -1
+//     }
+//     replayBtn.removeAttribute("hidden")
+//     render()
+//   }
+
+
+  
 function handleClick(evt){
   let index = parseInt(evt.target.id)
-  console.log(index)
   if (isWinner !== null){
     return
-    } else if (boardSqr[index] === null){
-      if(boardSqr[index + 6] === null){
-        boardSqr[index + 6] = playerTurn
-        console.log(boardSqr)
-      }else{
-        boardSqr[index] = playerTurn
-      }
-      playerTurn *= -1
+
+
+  } else if (boardSqr[index] === null){
+    for(i = 0; i < boardSqr.length; i + 6)
+    if(boardSqr[index + 6] === null){
+      boardSqr[index + 6] = playerTurn
+    }else{
+      boardSqr[index] = playerTurn
     }
-    replayBtn.removeAttribute("hidden")
-    render()
+    playerTurn *= -1
   }
-  
+
+
+  replayBtn.removeAttribute("hidden")
+render()
+}
+
+
+
+
+
+
+
+
+
 
 function render(){
   for (let i = 0; i < boardSqr.length; i++){
@@ -110,6 +144,18 @@ function render(){
     }else{
       sqrs[i].innerText = ''
     }
+  }
+  getMssgs()
+}
+
+
+function getMssgs(){
+  if (isWinner === 'T'){
+    mssgs.innerText = "It's A Tie!!"
+  }else if (isWinner !== null){
+    mssgs.innerText = `${playerTurn === 1 ? 'Yellow' : 'Red'} won the game!`
+  } else {
+    mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Red' : 'Yellow'}`
   }
 }
 
