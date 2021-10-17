@@ -81,8 +81,10 @@ function init(){
   playerTurn = 1
   replayBtn.setAttribute("hidden", true)
   render()
+  mssgs.innerText = "Red Player Goes First"
 }
 
+//*handleClick One - pushes one forward
 // function handleClick(evt){
 //   let index = parseInt(evt.target.id)
 //   //parseInt is giving me the integer
@@ -91,6 +93,7 @@ function init(){
 //     return
 //     } else if (boardSqr[index] === null){
 //       //don't change, checking to see if any square is null to make sure it doesn't get reassigned
+//       // still works as regular else statement
 //       if(boardSqr[index + 6] === null){
 //         boardSqr[index + 6] = playerTurn
 //         // console.log(boardSqr)
@@ -104,27 +107,39 @@ function init(){
 //   }
 
 
-  
+ //*handleClick Two - pushes only to bottom row
 function handleClick(evt){
   let index = parseInt(evt.target.id)
   if (isWinner !== null){
     return
-
-
   } else if (boardSqr[index] === null){
-    for(i = 0; i < boardSqr.length; i + 6)
-    if(boardSqr[index + 6] === null){
-      boardSqr[index + 6] = playerTurn
-    }else{
-      boardSqr[index] = playerTurn
-    }
+    let multiply = 5
+      if(boardSqr[index + (6 * [multiply])] === null){
+        boardSqr[index + (6 * [multiply])] = playerTurn
+      }else{
+        return
+      } 
     playerTurn *= -1
   }
-
-
   replayBtn.removeAttribute("hidden")
-render()
+  render()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,7 +170,7 @@ function getMssgs(){
   }else if (isWinner !== null){
     mssgs.innerText = `${playerTurn === 1 ? 'Yellow' : 'Red'} won the game!`
   } else {
-    mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Red' : 'Yellow'}`
+      mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Red' : 'Yellow'}`
   }
 }
 
