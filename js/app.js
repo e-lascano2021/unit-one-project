@@ -72,13 +72,45 @@ replayBtn.addEventListener("reset", init)
 sqrs.forEach(square => square.addEventListener("click", handleClick))
 
 /*------------------------------ Functions ----------------------------*/
-init ()
+init()
 
 function init(){
-  boardSqr.fill(null)
+  isWinner = null
+  boardSqr = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
   playerTurn = 1
   replayBtn.setAttribute("hidden", true)
-  render()
+  // render()
+}
+
+function handleClick(evt){
+  let index = evt.target.id
+  console.log(index)
+  if (isWinner !== null){
+    return
+    } else if (boardSqr[index] === null){
+      if(boardSqr[index + 6] === null){
+        boardSqr[index] = playerTurn
+        console.log(boardSqr)
+      }else{
+        boardSqr[index] = playerTurn
+      }
+      playerTurn *= -1
+    }
+    replayBtn.removeAttribute("hidden")
+    render()
+  }
+  
+
+function render(){
+  for (let i = 0; i < boardSqr.length; i++){
+    if (boardSqr[i] === 1){
+      sqrs[i].style.backgroundColor = "red"
+    } else if (boardSqr[i] === -1){
+      sqrs[i].style.backgroundColor = "yellow"
+    }else{
+      sqrs[i].innerText = ''
+    }
+  }
 }
 
 
