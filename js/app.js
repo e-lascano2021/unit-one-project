@@ -83,13 +83,13 @@ function init(){
 }
 
 function handleClick(evt){
-  let index = evt.target.id
+  let index = parseInt(evt.target.id)
   console.log(index)
   if (isWinner !== null){
     return
     } else if (boardSqr[index] === null){
       if(boardSqr[index + 6] === null){
-        boardSqr[index] = playerTurn
+        boardSqr[index + 6] = playerTurn
         console.log(boardSqr)
       }else{
         boardSqr[index] = playerTurn
