@@ -116,6 +116,7 @@ function init(){
 //     let multiply = 5
 //       if(boardSqr[index + (6 * [multiply])] === null){
 //         boardSqr[index + (6 * [multiply])] = playerTurn
+//         multiply -= 1
 //       }else{
 //         return
 //       } 
@@ -128,24 +129,54 @@ function init(){
 
 
 //* handleClick Three
-function handleClick(evt){
+// function handleClick(evt){
+//   let index = parseInt(evt.target.id)
+//   if (isWinner !== null){
+//     return
+//   } else if (boardSqr[index] === null){
+//     for(let i = 5; i > boardSqr[index]; i--){
+//       if(boardSqr[index + (6 * [i])] === null){
+//         boardSqr[index + (6 * [i])] = playerTurn
+//       }
+//       else{
+//         return
+//       } 
+//       playerTurn *= -1
+//     }
+//   }
+//   replayBtn.removeAttribute("hidden")
+//   render()
+// }
+
+function handleClick (evt){
   let index = parseInt(evt.target.id)
-  if (isWinner !== null){
+  if (isWinner !== null || boardSqr[index] !== null){
     return
-  } else if (boardSqr[index] === null){
-    for(let i = 5; i > boardSqr[index]; i--){
-      if(boardSqr[index + (6 * [i])] === null){
-        boardSqr[index + (6 * [i])] = playerTurn
-      }
-      else{
-        return
-      } 
-      playerTurn *= -1
+  }else{
+    let add = 30
+    // while (boardSqr[index + add] === null) {
+      if(boardSqr[index + add] !== null){
+        while (boardSqr[index + add] !== null){
+          add-= 6
+        }
+      // return boardSqr[index + (add -= 6)]
     }
-  }
-  replayBtn.removeAttribute("hidden")
-  render()
+    boardSqr[index + add] = playerTurn
+    
+    }
+  // }
+  playerTurn *= -1
+    replayBtn.removeAttribute("hidden")
+    render()
 }
+
+
+
+
+
+
+
+
 
 
 
