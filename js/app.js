@@ -108,45 +108,44 @@ function init(){
 
 
  //*handleClick Two - pushes only to bottom row
+// function handleClick(evt){
+//   let index = parseInt(evt.target.id)
+//   if (isWinner !== null){
+//     return
+//   } else if (boardSqr[index] === null){
+//     let multiply = 5
+//       if(boardSqr[index + (6 * [multiply])] === null){
+//         boardSqr[index + (6 * [multiply])] = playerTurn
+//       }else{
+//         return
+//       } 
+//     playerTurn *= -1
+//   }
+//   replayBtn.removeAttribute("hidden")
+//   render()
+// }
+
+
+
+//* handleClick Three
 function handleClick(evt){
   let index = parseInt(evt.target.id)
   if (isWinner !== null){
     return
   } else if (boardSqr[index] === null){
-    let multiply = 5
-      if(boardSqr[index + (6 * [multiply])] === null){
-        boardSqr[index + (6 * [multiply])] = playerTurn
-      }else{
+    for(let i = 5; i > boardSqr[index]; i--){
+      if(boardSqr[index + (6 * [i])] === null){
+        boardSqr[index + (6 * [i])] = playerTurn
+      }
+      else{
         return
       } 
-    playerTurn *= -1
+      playerTurn *= -1
+    }
   }
   replayBtn.removeAttribute("hidden")
   render()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -160,6 +159,7 @@ function render(){
       sqrs[i].innerText = ''
     }
   }
+  getWinner()
   getMssgs()
 }
 
@@ -174,4 +174,27 @@ function getMssgs(){
   }
 }
 
-
+function getWinner (){
+  for (let i = 0; i < winCombos.length; i++){
+    // console.log(winCombos[i])
+      let total = 0
+      let combo = winCombos[i]
+      //array[0,1,2]  NOT 0,1,2
+      for (let i = 0; i < combo.length; i++){
+        total += boardSqr[combo[i]]      
+      }
+      let winValue = Math.abs(total)
+      if(winValue === 4){
+        //winner
+        isWinner = boardSqr[combo[i]]
+        return isWinner
+      }else if(winValue !== 4){
+        //no winner
+        //check for tie
+        if (boardSqr.includes(null) === false){
+          isWinner = "T"
+        }
+        getMssgs()
+      }
+    }  
+}
