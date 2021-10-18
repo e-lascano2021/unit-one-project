@@ -84,100 +84,22 @@ function init(){
   mssgs.innerText = "Red Player Goes First"
 }
 
-//*handleClick One - pushes one forward
-// function handleClick(evt){
-//   let index = parseInt(evt.target.id)
-//   //parseInt is giving me the integer
-//   // console.log(index)
-//   if (isWinner !== null){
-//     return
-//     } else if (boardSqr[index] === null){
-//       //don't change, checking to see if any square is null to make sure it doesn't get reassigned
-//       // still works as regular else statement
-//       if(boardSqr[index + 6] === null){
-//         boardSqr[index + 6] = playerTurn
-//         // console.log(boardSqr)
-//       }else{
-//         boardSqr[index] = playerTurn
-//       }
-//       playerTurn *= -1
-//     }
-//     replayBtn.removeAttribute("hidden")
-//     render()
-//   }
-
-
- //*handleClick Two - pushes only to bottom row
-// function handleClick(evt){
-//   let index = parseInt(evt.target.id)
-//   if (isWinner !== null){
-//     return
-//   } else if (boardSqr[index] === null){
-//     let multiply = 5
-//       if(boardSqr[index + (6 * [multiply])] === null){
-//         boardSqr[index + (6 * [multiply])] = playerTurn
-//         multiply -= 1
-//       }else{
-//         return
-//       } 
-//     playerTurn *= -1
-//   }
-//   replayBtn.removeAttribute("hidden")
-//   render()
-// }
-
-
-
-//* handleClick Three
-// function handleClick(evt){
-//   let index = parseInt(evt.target.id)
-//   if (isWinner !== null){
-//     return
-//   } else if (boardSqr[index] === null){
-//     for(let i = 5; i > boardSqr[index]; i--){
-//       if(boardSqr[index + (6 * [i])] === null){
-//         boardSqr[index + (6 * [i])] = playerTurn
-//       }
-//       else{
-//         return
-//       } 
-//       playerTurn *= -1
-//     }
-//   }
-//   replayBtn.removeAttribute("hidden")
-//   render()
-// }
 
 function handleClick (evt){
   let index = parseInt(evt.target.id)
   if (isWinner !== null || boardSqr[index] !== null){
     return
-  }else{
+  } else{
     let add = 30
-    // while (boardSqr[index + add] === null) {
-      if(boardSqr[index + add] !== null){
-        while (boardSqr[index + add] !== null){
-          add-= 6
-        }
-      // return boardSqr[index + (add -= 6)]
+    while (boardSqr[index + add] !== null){
+      add -= 6
     }
     boardSqr[index + add] = playerTurn
-    
-    }
-  // }
+  }
   playerTurn *= -1
-    replayBtn.removeAttribute("hidden")
-    render()
+  replayBtn.removeAttribute("hidden")
+  render()
 }
-
-
-
-
-
-
-
-
-
 
 
 function render(){
@@ -204,6 +126,7 @@ function getMssgs(){
       mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Red' : 'Yellow'}`
   }
 }
+
 
 function getWinner (){
   for (let i = 0; i < winCombos.length; i++){
