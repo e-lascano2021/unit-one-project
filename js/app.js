@@ -66,13 +66,17 @@ let playerTurn, isWinner, boardSqr
 const replayBtn = document.querySelector("#replay")
 const sqrs = document.querySelectorAll(".sqrs")
 const mssgs = document.querySelector("#message")
+const lightDarkBtn = document.querySelector("#light-dark-button")
+const body = document.querySelector("body")
 
 /*--------------------------- Event Listeners -------------------------*/
 
 replayBtn.addEventListener("reset", init)
+lightDarkBtn.addEventListener("click", toggleLightDark)
 sqrs.forEach(square => square.addEventListener("click", handleClick))
 
 /*------------------------------ Functions ----------------------------*/
+checkDarkPref()
 init()
 
 function init(){
@@ -151,4 +155,19 @@ function getWinner (){
         getMssgs()
       }
     }  
+}
+
+
+function toggleLightDark() {
+  body.className = body.className === "dark" ? "" : "dark"
+}
+
+
+function checkDarkPref() {
+  if (
+    window.matchMedia("(prefers-color-scheme:dark)").matches &&
+    body.className !== "dark"
+  ) {
+    toggleLightDark()
+  }
 }
