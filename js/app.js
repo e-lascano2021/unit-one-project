@@ -72,11 +72,11 @@ const body = document.querySelector("body")
 /*--------------------------- Event Listeners -------------------------*/
 
 replayBtn.addEventListener("reset", init)
-lightDarkBtn.addEventListener("click", toggleLightDark)
+//lightDarkBtn.addEventListener("click", toggleLightDark)
 sqrs.forEach(square => square.addEventListener("click", handleClick))
 
 /*------------------------------ Functions ----------------------------*/
-checkDarkPref()
+//checkDarkPref()
 init()
 
 function init(){
@@ -158,16 +158,16 @@ function getWinner (){
 }
 
 
-function toggleLightDark() {
-  body.className = body.className === "dark" ? "" : "dark"
-}
+// function toggleLightDark() {
+//   body.className = body.className === "dark" ? "" : "dark"
+// }
 
 
-function checkDarkPref() {
-  if (
-    window.matchMedia("(prefers-color-scheme:dark)").matches &&
-    body.className !== "dark"
-  ) {
-    toggleLightDark()
-  }
-}
+// function checkDarkPref() {
+//   if (
+//     window.matchMedia("(prefers-color-scheme:dark)").matches &&
+//     body.className !== "dark"
+//   ) {
+//     toggleLightDark()
+//   }
+// }
