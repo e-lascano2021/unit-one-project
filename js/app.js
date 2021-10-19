@@ -85,7 +85,7 @@ function init(){
   playerTurn = 1
   replayBtn.setAttribute("hidden", true)
   render()
-  mssgs.innerText = "Red Player Goes First"
+  mssgs.innerText = "Pink Goes First!"
 }
 
 
@@ -109,9 +109,9 @@ function handleClick (evt){
 function render(){
   for (let i = 0; i < boardSqr.length; i++){
     if (boardSqr[i] === 1){
-      sqrs[i].style.backgroundColor = "red"
+      sqrs[i].style.background = "hotPink"
     } else if (boardSqr[i] === -1){
-      sqrs[i].style.backgroundColor = "yellow"
+      sqrs[i].style.background = "lime"
     }else{
       sqrs[i].innerText = ''
     }
@@ -125,9 +125,9 @@ function getMssgs(){
   if (isWinner === 'T'){
     mssgs.innerText = "It's A Tie!!"
   }else if (isWinner !== null){
-    mssgs.innerText = `${playerTurn === 1 ? 'Yellow' : 'Red'} won the game!`
+    mssgs.innerText = `${playerTurn === 1 ? 'Green' : 'Pink'} won the game!`
   } else {
-      mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Red' : 'Yellow'}`
+      mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Pink' : 'Green'}`
   }
 }
 
