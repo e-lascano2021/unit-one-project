@@ -76,7 +76,7 @@ lightDarkBtn.addEventListener("click", toggleLightDark)
 sqrs.forEach(square => square.addEventListener("click", handleClick))
 
 /*------------------------------ Functions ----------------------------*/
-//checkDarkPref()
+checkDarkPref()
 init()
 
 function init(){
