@@ -50,8 +50,8 @@ section {
   border: 15px ridge rgb(35, 35, 199);
   background-color: blue;
   display: grid;
-  grid-template-rows: repeat(6, 10vh);
-  grid-template-columns: repeat(6, 10vh);
+  grid-template-rows: repeat(6, 7vh);
+  grid-template-columns: repeat(6, 7vh);
   grid-gap: 0.5vmin;
   padding: 3.5px;
 }
