@@ -63,7 +63,7 @@ div {
 div.sqrs {
   border-radius: 50%;
   background:linear-gradient(45deg, rgb(255, 182, 193), lightblue, lightcyan, lightgreen);
-  filter: blur(.6px);
+  filter: blur(.15px);
 }
 
 
@@ -75,6 +75,7 @@ div.sqrs {
   border: 2px ridge black;
   width: 8rem;
   height: 2.2rem;
+  padding-right: 6px;
 }
 
 
