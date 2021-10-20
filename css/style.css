@@ -41,8 +41,8 @@ body.dark{
   --body-bg: linear-gradient(45deg, black, rgb(99, 0, 99), black );
   --body-color: white;
   --header-bg-color: rgba(26, 9, 9, 0.708);
-  --section-border: 15px ridge rgb(227, 126, 3);
-  --section-bg-color: rgb(250, 138, 0);
+  --section-border: 15px ridge rgb(255, 98, 0);
+  --section-bg-color: rgb(254, 110, 0);
   --btn-color: white;
   --btn-border: 2px ridge white;
   --light-dark-btn-content: "Light Mode"; 

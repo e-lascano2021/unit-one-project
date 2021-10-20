@@ -159,6 +159,7 @@ function getWinner (){
 
 function toggleLightDark() {
   body.className = body.className === "dark" ? "" : "dark"
+  
 }
 
 
