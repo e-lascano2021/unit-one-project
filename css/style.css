@@ -93,7 +93,6 @@ div {
 div.sqrs {
   border-radius: 50%;
   background:var(--body-bg);
-  filter: blur(.05px);
 }
 
 .btn{
