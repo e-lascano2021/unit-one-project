@@ -42,7 +42,7 @@ body{
 body.dark{
   --body-bg: linear-gradient(45deg, black, rgb(99, 0, 99), black);
   --body-color: white;
-  --header-bg-color: rgba(0, 0, 0, 0.708);
+  --header-bg-color: rgba(0, 0, 0, 0.557);
   --section-border: 15px ridge rgb(255, 98, 0);
   --section-bg-color: rgb(254, 110, 0);
   --btn-color: white;
