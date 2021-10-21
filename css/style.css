@@ -26,6 +26,7 @@ body{
   --btn-color: black;
   --btn-border: 2px ridge black;
   --div-hover: linear-gradient(45deg, rgb(245, 108, 129), rgba(146, 199, 216, 0.824), rgba(173, 247, 247, 0.913), rgb(124, 235, 124));
+  --replay-text-shadow: 0 0 8px #fff;
   --light-dark-btn-content: "Dark Mode"; 
   background: var(--body-bg);
   font-family: 'Audiowide', cursive;
@@ -49,7 +50,8 @@ body.dark{
   --div-hover: linear-gradient(45deg, black, rgb(48, 0, 48), black);
   --light-dark-btn-content: "Light Mode"; 
   background: var(--body-bg);
-  color: var(--body-color)
+  color: var(--body-color);
+  text-shadow: 0 0 8px #fff;
 }
 
 nav{
@@ -107,12 +109,18 @@ div.sqrs {
   padding-right: 6px;
 }
 
+#replay{
+  color: 0 0 8px #fff;
+  text-shadow: var(--replay-text-shadow);
+}
+
 #replay:hover{
 color: red;
 }
 
 #light-dark-button::after{
-  content: var(--light-dark-btn-content)
+  content: var(--light-dark-btn-content);
+  text-shadow: 0 0 8px #fff;
 }
 
 div.sqrs:hover{
