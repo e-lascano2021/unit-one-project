@@ -30,6 +30,13 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 <img src="https://user-images.githubusercontent.com/91232529/138300729-7a2895e4-7971-494a-b5e8-b9d6ffab83c4.png">
 <img src="https://user-images.githubusercontent.com/91232529/138300952-c1720b8e-faec-4d1f-869b-2e97f66d0f23.png">
 
+## Features:
+
+1. Board Grid
+2. Token Pieces
+3. Animations
+4. Light/Dark Mode
+5. Replay Button
 
 ## Technologies Used:
 
