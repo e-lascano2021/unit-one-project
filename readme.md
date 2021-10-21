@@ -26,7 +26,9 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 
 ## Preview
 
-
+<img src="https://user-images.githubusercontent.com/91232529/138300357-04097f57-27f0-45c1-80ef-03cec4d8c623.png">
+<img src="https://user-images.githubusercontent.com/91232529/138300729-7a2895e4-7971-494a-b5e8-b9d6ffab83c4.png">
+<img src="https://user-images.githubusercontent.com/91232529/138300952-c1720b8e-faec-4d1f-869b-2e97f66d0f23.png">
 
 
 ## Technologies Used:
@@ -34,15 +36,17 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 - JavaScript
 - HTML
 - CSS
-
-
-## Credits
-
-- google fonts
+- google fonts 
 - animate.css
 
 
-## Future Plans
+## Credits:
+
+- **[google fonts](https://fonts.google.com/specimen/Audiowide?preview.text=Connect%20Four%20%2F%2F%20Red%20Player%20Goes%20First&preview.text_type=custom&query=audio#standard-styles)**
+- **[animate.css](https://animate.style/)**
+
+
+## Future Plans:
 
 - Glowing Text
 - Animations Dependant on Light/Dark Mode
@@ -50,12 +54,3 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 - Sound 
   - throughout the game
   - pieces being places
-
-
-<!-- 
-
-Links Used:
-  -https://fonts.google.com/specimen/Audiowide?preview.text=Connect%20Four%20%2F%2F%20Red%20Player%20Goes%20First&preview.text_type=custom&query=audio#standard-styles
-  -https://animate.style/
-    -
- -->
