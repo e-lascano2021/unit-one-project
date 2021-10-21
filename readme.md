@@ -1,11 +1,8 @@
 
 # Stack-4
----
 
 ## Game Overview:
 Stack-4, also known as Connect Four, is a two player mind game. Each player will take turns dropping their token on the board. The first one to stack 4 tokens in a row in their respective token horizontally, vertically, or diagonally wins!
-
----
 
 ## Let's Get Started!
 
@@ -20,13 +17,17 @@ Before we rush into the game there are a few things we need to go over:
 3. From there each Player will take turns stacking their tokens on the board
 4. The first player to get four or more of their tokens in a row is the winner!
 
+---
+
 ### Where Can I Play?
 
 I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)**!
 
---- 
+
 ## Preview
----
+
+
+
 
 ## Technologies Used:
 
@@ -34,13 +35,22 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 - HTML
 - CSS
 
---- 
 
 ## Credits
----
+
+- google fonts
+- animate.css
+
 
 ## Future Plans
----
+
+- Glowing Text
+- Animations Dependant on Light/Dark Mode
+- Player gets to pick from a range of colors
+- Sound 
+  - throughout the game
+  - pieces being places
+
 
 <!-- 
 

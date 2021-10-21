@@ -56,7 +56,6 @@ const winCombos = [
   [12,19,26,33],
 ]
 
-
 /*-------------------------- Variables (state) ------------------------*/
 
 let playerTurn, isWinner, boardSqr
@@ -76,8 +75,10 @@ lightDarkBtn.addEventListener("click", toggleLightDark)
 sqrs.forEach(square => square.addEventListener("click", handleClick))
 
 /*------------------------------ Functions ----------------------------*/
+
 checkDarkPref()
 init()
+
 
 function init(){
   isWinner = null
@@ -159,7 +160,7 @@ function getWinner (){
 
 function toggleLightDark() {
   body.className = body.className === "dark" ? "" : "dark"
-  
+
 }
 
 
