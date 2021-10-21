@@ -25,6 +25,7 @@ body{
   --section-bg-color: blue;
   --btn-color: black;
   --btn-border: 2px ridge black;
+  --div-hover: linear-gradient(45deg, rgb(245, 108, 129), rgba(146, 199, 216, 0.824), rgba(173, 247, 247, 0.913), rgb(124, 235, 124));
   --light-dark-btn-content: "Dark Mode"; 
   background: var(--body-bg);
   font-family: 'Audiowide', cursive;
@@ -45,6 +46,7 @@ body.dark{
   --section-bg-color: rgb(254, 110, 0);
   --btn-color: white;
   --btn-border: 2px ridge white;
+  --div-hover: black;
   --light-dark-btn-content: "Light Mode"; 
   background: var(--body-bg);
   color: var(--body-color)
@@ -106,4 +108,8 @@ background: rgba(255, 0, 0, 0.625);
 
 #light-dark-button::after{
   content: var(--light-dark-btn-content)
+}
+
+div.sqrs:hover{
+  background: var(--div-hover);
 }

@@ -62,16 +62,16 @@ let playerTurn, isWinner, boardSqr
 
 /*--------------------- Cached Element References ---------------------*/
 
+const lightDarkBtn = document.querySelector("#light-dark-button")
 const replayBtn = document.querySelector("#replay")
 const sqrs = document.querySelectorAll(".sqrs")
 const mssgs = document.querySelector("#message")
-const lightDarkBtn = document.querySelector("#light-dark-button")
 const body = document.querySelector("body")
 
 /*--------------------------- Event Listeners -------------------------*/
 
-replayBtn.addEventListener("reset", init)
 lightDarkBtn.addEventListener("click", toggleLightDark)
+replayBtn.addEventListener("reset", init)
 sqrs.forEach(square => square.addEventListener("click", handleClick))
 
 /*------------------------------ Functions ----------------------------*/
@@ -82,7 +82,7 @@ init()
 
 function init(){
   isWinner = null
-  boardSqr = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+  boardSqr = new Array(36).fill(null)
   playerTurn = 1
   replayBtn.setAttribute("hidden", true)
   render()
@@ -94,7 +94,8 @@ function handleClick (evt){
   let index = parseInt(evt.target.id)
   if (isWinner !== null || boardSqr[index] !== null){
     return
-  } else{
+  }
+  else{
     let add = 30
     while (boardSqr[index + add] !== null){
       add -= 6
@@ -111,10 +112,9 @@ function render(){
   for (let i = 0; i < boardSqr.length; i++){
     if (boardSqr[i] === 1){
       sqrs[i].style.background = "hotPink"
-    } else if (boardSqr[i] === -1){
+    }
+    else if (boardSqr[i] === -1){
       sqrs[i].style.background = "lime"
-    }else{
-      sqrs[i].innerText = ''
     }
   }
   getWinner()
@@ -125,10 +125,12 @@ function render(){
 function getMssgs(){
   if (isWinner === 'T'){
     mssgs.innerText = "It's A Tie!!"
-  }else if (isWinner !== null){
+  }
+  else if (isWinner !== null){
     mssgs.innerText = `${playerTurn === 1 ? 'Green' : 'Pink'} won the game!`
-  } else {
-      mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Pink' : 'Green'}`
+  }
+  else {
+    mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Pink' : 'Green'}`
   }
 }
 
@@ -146,7 +148,8 @@ function getWinner (){
         //winner
         isWinner = boardSqr[combo[i]]
         return isWinner
-      }else if(winValue !== 4){
+      }
+      else if(winValue !== 4){
         //no winner
         //check for tie
         if (boardSqr.includes(null) === false){
@@ -160,7 +163,6 @@ function getWinner (){
 
 function toggleLightDark() {
   body.className = body.className === "dark" ? "" : "dark"
-
 }
 
 
