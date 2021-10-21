@@ -125,9 +125,11 @@ function render(){
 function getMssgs(){
   if (isWinner === 'T'){
     mssgs.innerText = "It's A Tie!!"
+    mssgs.classList.add('animate__animated', 'animate__wobble')
   }
   else if (isWinner !== null){
     mssgs.innerText = `${playerTurn === 1 ? 'Green' : 'Pink'} won the game!`
+    mssgs.classList.add('animate__animated', 'animate__tada')
   }
   else {
     mssgs.innerText = `Next Turn: ${playerTurn === 1 ? 'Pink' : 'Green'}`
@@ -136,22 +138,17 @@ function getMssgs(){
 
 function getWinner (){
   for (let i = 0; i < winCombos.length; i++){
-    // console.log(winCombos[i])
       let total = 0
       let combo = winCombos[i]
-      //array[0,1,2]  NOT 0,1,2
       for (let i = 0; i < combo.length; i++){
         total += boardSqr[combo[i]]      
       }
       let winValue = Math.abs(total)
       if(winValue === 4){
-        //winner
         isWinner = boardSqr[combo[i]]
         return isWinner
       }
       else if(winValue !== 4){
-        //no winner
-        //check for tie
         if (boardSqr.includes(null) === false){
           isWinner = "T"
         }

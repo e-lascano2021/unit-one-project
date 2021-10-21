@@ -39,14 +39,14 @@ body{
 }
 
 body.dark{
-  --body-bg: linear-gradient(45deg, black, rgb(99, 0, 99), black );
+  --body-bg: linear-gradient(45deg, black, rgb(99, 0, 99), black);
   --body-color: white;
   --header-bg-color: rgba(26, 9, 9, 0.708);
   --section-border: 15px ridge rgb(255, 98, 0);
   --section-bg-color: rgb(254, 110, 0);
   --btn-color: white;
   --btn-border: 2px ridge white;
-  --div-hover: black;
+  --div-hover: linear-gradient(45deg, black, rgb(48, 0, 48), black);
   --light-dark-btn-content: "Light Mode"; 
   background: var(--body-bg);
   color: var(--body-color)
@@ -58,6 +58,8 @@ nav{
   display: flex;
   width: 100%;
   align-items: flex-start;
+  animation: slideInLeft;
+  animation-duration: 3s;
 }
 
 h1 {
@@ -67,6 +69,8 @@ h1 {
   justify-content: space-around;
   margin-top: 40px;
   padding: 3.5%;
+  animation: zoomInUp;
+  animation-duration: 1.5s;
 }
 
 section {
@@ -78,16 +82,18 @@ section {
   grid-template-columns: repeat(6, 7vh);
   grid-gap: 0.5vmin;
   padding: 3.5px;
+  animation: zoomIn;
+  animation-duration: 1.5s;
 }
 
 div {
-  border: 2px ridge black;
+  border: 2.7px ridge black;
 }
 
 div.sqrs {
   border-radius: 50%;
   background:var(--body-bg);
-  filter: blur(.15px);
+  filter: blur(.12px);
 }
 
 .btn{
@@ -103,7 +109,7 @@ div.sqrs {
 }
 
 #replay:hover{
-background: rgba(255, 0, 0, 0.625);
+color: red;
 }
 
 #light-dark-button::after{
