@@ -124,6 +124,7 @@ function render(){
 
 
 function getMssgs(){
+  mssgs.classList.remove('animated', "animate__jackInTheBox")
   if (isWinner === 'T'){
     mssgs.innerText = "It's A Tie!!"
     mssgs.classList.add('animate__animated', 'animate__wobble')
