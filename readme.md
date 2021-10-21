@@ -55,10 +55,10 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 
 ## Future Plans:
 
-- Glowing Text
+- ~~Glowing Text~~
 - Animations Dependant on Light/Dark Mode
 - Player gets to pick from a range of colors
-- Time played
+- Timer to see how long the game lasted
 - Sound 
   - throughout the game
   - pieces being places
