@@ -87,6 +87,7 @@ function init(){
   replayBtn.setAttribute("hidden", true)
   render()
   mssgs.innerText = "Pink Goes First!"
+  mssgs.classList.add("animate__animated", "animate__jackInTheBox")
 }
 
 
