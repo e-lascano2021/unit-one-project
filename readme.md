@@ -27,8 +27,8 @@ I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)*
 ## Preview
 
 <img src="https://user-images.githubusercontent.com/91232529/138300357-04097f57-27f0-45c1-80ef-03cec4d8c623.png">
-<img src="https://user-images.githubusercontent.com/91232529/138300729-7a2895e4-7971-494a-b5e8-b9d6ffab83c4.png">
-<img src="https://user-images.githubusercontent.com/91232529/138300952-c1720b8e-faec-4d1f-869b-2e97f66d0f23.png">
+<img src="https://user-images.githubusercontent.com/91232529/138463149-dd7b6494-9a55-4026-8054-9dda22bed950.png">
+<img src="https://user-images.githubusercontent.com/91232529/138463242-91c0473d-3813-49d2-a8fc-5eb924c62471.png">
 
 ## Features:
 
