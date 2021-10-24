@@ -21,7 +21,7 @@ Before we rush into the game there are a few things we need to go over:
 
 ### Where Can I Play?
 
-I'm glad you asked! You can play **[here](https://el-connect-four.netlify.app/)**!
+I'm glad you asked! You can play **[here](https://stack-4.netlify.app/)**!
 
 
 ## Preview
